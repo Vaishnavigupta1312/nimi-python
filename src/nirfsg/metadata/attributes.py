@@ -321,7 +321,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ReferenceClockSource',
         'lv_property': 'Clock:Reference Clock Source',
         'name': 'REF_CLOCK_SOURCE',
         'type': 'ViString'
@@ -459,7 +458,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'StartTrigDigEdgeSource',
         'lv_property': 'Triggers:Start:Digital Edge:Source',
         'name': 'DIGITAL_EDGE_START_TRIGGER_SOURCE',
         'type': 'ViString'
@@ -587,7 +585,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'StartTrigExportOutputTerm',
         'lv_property': 'Triggers:Start:Export Output Terminal',
         'name': 'EXPORTED_START_TRIGGER_OUTPUT_TERMINAL',
         'type': 'ViString'
@@ -616,7 +613,6 @@ attributes = {
                 'NIRFSG_ATTR_REF_CLOCK_SOURCE Setting'
             ]
         },
-        'enum': 'PxiChassisClk10Source',
         'lv_property': 'Clock:PXI Chassis Clk 10 Source',
         'name': 'PXI_CHASSIS_CLK10_SOURCE',
         'type': 'ViString'
@@ -1123,7 +1119,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ScriptTrigDigEdgeSource',
         'lv_property': 'Triggers:Script:Digital Edge:Source',
         'name': 'DIGITAL_EDGE_SCRIPT_TRIGGER_SOURCE',
         'supported_rep_caps': [
@@ -1280,7 +1275,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ScriptTrigExportOutputTerm',
         'lv_property': 'Triggers:Script:Export Output Terminal',
         'name': 'EXPORTED_SCRIPT_TRIGGER_OUTPUT_TERMINAL',
         'supported_rep_caps': [
@@ -1411,7 +1405,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ArbSampleClockSource',
         'lv_property': 'Clock:Arb Sample Clock Source',
         'name': 'ARB_SAMPLE_CLOCK_SOURCE',
         'type': 'ViString'
@@ -1808,7 +1801,6 @@ attributes = {
                 'Supported devices'
             ]
         },
-        'enum': 'ReferenceClockExportOutputTerminal',
         'lv_property': 'Clock:Reference Clock Export Output Terminal',
         'name': 'EXPORTED_REF_CLOCK_OUTPUT_TERMINAL',
         'type': 'ViString'
@@ -1941,7 +1933,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ScriptTrigDigLevelSource',
         'lv_property': 'Triggers:Script:Digital Level:Source',
         'name': 'DIGITAL_LEVEL_SCRIPT_TRIGGER_SOURCE',
         'supported_rep_caps': [
@@ -2172,7 +2163,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'DoneEventExportOutputTerm',
         'lv_property': 'Events:Done Event Export Output Terminal',
         'name': 'EXPORTED_DONE_EVENT_OUTPUT_TERMINAL',
         'type': 'ViString'
@@ -2295,7 +2285,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'MarkerEventExportOutputTerm',
         'lv_property': 'Events:Marker:Output Terminal',
         'name': 'EXPORTED_MARKER_EVENT_OUTPUT_TERMINAL',
         'repeated_capability_type': 'markers',
@@ -2422,7 +2411,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'StartedEventExportOutputTerm',
         'lv_property': 'Events:Started Event Export Output Terminal',
         'name': 'EXPORTED_STARTED_EVENT_OUTPUT_TERMINAL',
         'type': 'ViString'
@@ -2928,7 +2916,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'ConfigurationSettledEventExportOutputTerm',
         'lv_property': 'Events:Configuration Settled Event Export Output Terminal',
         'name': 'EXPORTED_CONFIGURATION_SETTLED_EVENT_OUTPUT_TERMINAL',
         'type': 'ViString'
@@ -3234,7 +3221,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'LoSource',
         'lv_property': 'Device Specific:Vector Signal Transceiver:Signal Path:LO Source',
         'name': 'LO_SOURCE',
         'type': 'ViString'
@@ -4664,7 +4650,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'PulseModulationSource',
         'lv_property': 'Modulation:Pulse:Pulse Modulation Source',
         'name': 'PULSE_MODULATION_SOURCE',
         'type': 'ViString'
@@ -4692,7 +4677,6 @@ attributes = {
                 'Description'
             ]
         },
-        'enum': 'PulseModulationOutputTerm',
         'lv_property': 'Events:Pulse Modulation:Exported Pulse Modulation Event Output Terminal',
         'name': 'EXPORTED_PULSE_MODULATION_EVENT_OUTPUT_TERMINAL',
         'type': 'ViString'

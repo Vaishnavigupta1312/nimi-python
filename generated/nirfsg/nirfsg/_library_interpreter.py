@@ -386,8 +386,8 @@ class LibraryInterpreter(object):
     def export_signal(self, signal, signal_identifier, output_terminal):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110
         signal_ctype = _visatype.ViInt32(signal.value)  # case S130
-        signal_identifier_ctype = ctypes.create_string_buffer(signal_identifier.value.encode(self._encoding))  # case C030
-        output_terminal_ctype = ctypes.create_string_buffer(output_terminal.value.encode(self._encoding))  # case C030
+        signal_identifier_ctype = ctypes.create_string_buffer(signal_identifier.encode(self._encoding))  # case C020
+        output_terminal_ctype = ctypes.create_string_buffer(output_terminal.encode(self._encoding))  # case C020
         error_code = self._library.niRFSG_ExportSignal(vi_ctype, signal_ctype, signal_identifier_ctype, output_terminal_ctype)
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
         return
@@ -672,7 +672,7 @@ class LibraryInterpreter(object):
     def send_software_edge_trigger(self, trigger, trigger_identifier):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110
         trigger_ctype = _visatype.ViInt32(trigger.value)  # case S130
-        trigger_identifier_ctype = ctypes.create_string_buffer(trigger_identifier.value.encode(self._encoding))  # case C030
+        trigger_identifier_ctype = ctypes.create_string_buffer(trigger_identifier.encode(self._encoding))  # case C020
         error_code = self._library.niRFSG_SendSoftwareEdgeTrigger(vi_ctype, trigger_ctype, trigger_identifier_ctype)
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
         return
@@ -740,32 +740,32 @@ class LibraryInterpreter(object):
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
         return
 
-    def set_waveform_burst_start_locations(self, channel_name, number_of_locations):  # noqa: N802
+    def set_waveform_burst_start_locations(self, channel_name, number_of_locations, locations):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110
         channel_name_ctype = ctypes.create_string_buffer(channel_name.encode(self._encoding))  # case C010
         number_of_locations_ctype = _visatype.ViInt32(number_of_locations)  # case S150
-        locations_ctype = _visatype.ViReal64()  # case S220
-        error_code = self._library.niRFSG_SetWaveformBurstStartLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, None if locations_ctype is None else (ctypes.pointer(locations_ctype)))
+        locations_ctype = _visatype.ViReal64(locations)  # case S150
+        error_code = self._library.niRFSG_SetWaveformBurstStartLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, locations_ctype)
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
-        return float(locations_ctype.value)
+        return
 
-    def set_waveform_burst_stop_locations(self, channel_name, number_of_locations):  # noqa: N802
+    def set_waveform_burst_stop_locations(self, channel_name, number_of_locations, locations):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110
         channel_name_ctype = ctypes.create_string_buffer(channel_name.encode(self._encoding))  # case C010
         number_of_locations_ctype = _visatype.ViInt32(number_of_locations)  # case S150
-        locations_ctype = _visatype.ViReal64()  # case S220
-        error_code = self._library.niRFSG_SetWaveformBurstStopLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, None if locations_ctype is None else (ctypes.pointer(locations_ctype)))
+        locations_ctype = _visatype.ViReal64(locations)  # case S150
+        error_code = self._library.niRFSG_SetWaveformBurstStopLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, locations_ctype)
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
-        return float(locations_ctype.value)
+        return
 
-    def set_waveform_marker_event_locations(self, channel_name, number_of_locations):  # noqa: N802
+    def set_waveform_marker_event_locations(self, channel_name, number_of_locations, locations):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110
         channel_name_ctype = ctypes.create_string_buffer(channel_name.encode(self._encoding))  # case C010
         number_of_locations_ctype = _visatype.ViInt32(number_of_locations)  # case S150
-        locations_ctype = _visatype.ViReal64()  # case S220
-        error_code = self._library.niRFSG_SetWaveformMarkerEventLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, None if locations_ctype is None else (ctypes.pointer(locations_ctype)))
+        locations_ctype = _visatype.ViReal64(locations)  # case S150
+        error_code = self._library.niRFSG_SetWaveformMarkerEventLocations(vi_ctype, channel_name_ctype, number_of_locations_ctype, locations_ctype)
         errors.handle_error(self, error_code, ignore_warnings=False, is_error_handling=False)
-        return float(locations_ctype.value)
+        return
 
     def unlock(self):  # noqa: N802
         vi_ctype = _visatype.ViSession(self._vi)  # case S110

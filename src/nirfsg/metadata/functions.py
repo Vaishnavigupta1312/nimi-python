@@ -2146,7 +2146,6 @@ functions = {
                         'Description'
                     ]
                 },
-                'enum': 'SignalIdentifier',
                 'name': 'signalIdentifier',
                 'type': 'ViConstString',
                 'use_array': False,
@@ -2188,7 +2187,6 @@ functions = {
                         'Description'
                     ]
                 },
-                'enum': 'ReferenceClockExportOutputTerminal',
                 'name': 'outputTerminal',
                 'type': 'ViConstString',
                 'use_array': False,
@@ -4223,7 +4221,6 @@ functions = {
                         'Description'
                     ]
                 },
-                'enum': 'TriggerIdentifier',
                 'name': 'triggerIdentifier',
                 'type': 'ViConstString',
                 'use_array': False,
@@ -4729,7 +4726,7 @@ functions = {
                 'use_in_python_api': True
             },
             {
-                'direction': 'out',
+                'direction': 'in',
                 'documentation': {
                     'description': 'Returns the burst start locations stored in the NI-RFSG session for the waveform that you specified in the **NIRFSG_ATTR_CHANNEL_NAME** parameter. This value is expressed in samples.'
                 },
@@ -4789,7 +4786,7 @@ functions = {
                 'use_in_python_api': True
             },
             {
-                'direction': 'out',
+                'direction': 'in',
                 'documentation': {
                     'description': 'Specifies the burst stop locations, in samples, to store in the NI-RFSG session.'
                 },
@@ -4849,7 +4846,7 @@ functions = {
                 'use_in_python_api': True
             },
             {
-                'direction': 'out',
+                'direction': 'in',
                 'documentation': {
                     'description': 'Specifies the marker location, in samples, to store in the NI-RFSG database.'
                 },

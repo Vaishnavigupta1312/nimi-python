@@ -3295,6 +3295,7 @@ functions = {
                 'use_in_python_api': True
             },
             {
+                'default_value': False,
                 'direction': 'in',
                 'documentation': {
                     'description': '                        Specifies whether you want NI-RFSG to perform an ID query.\n\n                        **Defined Values** :\n                    ',
@@ -3316,9 +3317,10 @@ functions = {
                 'name': 'idQuery',
                 'type': 'ViBoolean',
                 'use_array': False,
-                'use_in_python_api': True
+                'use_in_python_api': True,
             },
             {
+                'default_value': False,
                 'direction': 'in',
                 'documentation': {
                     'description': '                        Specifies whether you want to reset the NI-RFSG device during the initialization procedure.\n\n                        **Defined Values** :\n\n                    ',
@@ -3340,7 +3342,7 @@ functions = {
                 'name': 'resetDevice',
                 'type': 'ViBoolean',
                 'use_array': False,
-                'use_in_python_api': True
+                'use_in_python_api': True,
             },
             {
                 'direction': 'in',

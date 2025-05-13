@@ -88,9 +88,9 @@ class _Lock(object):
     def __exit__(self, exc_type, exc_value, traceback):
         self._session.unlock()
 
+
 % endif
 % if len(config['repeated_capabilities']) > 0:
-
 % if config['repeated_capability_object_type']['python'] == 'custom':
 # Dynamically handle repeated capabilities
 % for rep_cap in config['repeated_capabilities']:
@@ -204,9 +204,9 @@ class _NoChannel(object):
 
     def __exit__(self, exc_type, exc_value, traceback):
         self._session._repeated_capability = self._repeated_capability_cache
+
+
 % endif
-
-
 % endif
 class _SessionBase(object):
     '''Base class for all ${config['driver_name']} sessions.'''
